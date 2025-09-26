@@ -1,0 +1,36 @@
+{
+    "id": "lv6",
+    "title": "La Lámpara Rebelde",
+    "question": "Tienes una batería de 9V conectada en paralelo a dos bombillas. Una de ellas está encendida y la otra no. Tu objetivo: hacer que ambas bombillas funcionen al mismo tiempo. ¿Qué acción debes realizar sobre la bombilla apagada?",
+    "image": "levels/img/lv6.png",
+    "options": [
+      {
+        "id": "a",
+        "text": "Desconectar la bombilla que sí enciende para forzar a la otra a recibir la corriente.",
+        "causes_short": false,
+        "correct": false,
+        "explanation": "Incorrecto. En un circuito paralelo, la corriente tiene múltiples caminos. Desconectar la bombilla encendida no afectará a la bombilla apagada, ya que su rama sigue abierta o mal conectada. La ley de Ohm sigue rigiendo a cada rama de forma independiente."
+      },
+      {
+        "id": "b",
+        "text": "Puentea (conecta un cable en paralelo con) la bombilla apagada.",
+        "causes_short": true,
+        "correct": false,
+        "explanation": "¡Corto Circuito! Puentear una bombilla en un circuito paralelo significaría conectar los polos de la batería con resistencia muy baja (solo la bombilla encendida). Aunque no es un corto 'perfecto' si la otra bombilla está encendida, crearía una rama de muy baja resistencia, sobrecargando la batería y la bombilla restante. La acción correcta no es eliminar la bombilla, sino repararla."
+      },
+      {
+        "id": "c",
+        "text": "Conectar el polo faltante de la bombilla apagada a la línea de tierra (el polo negativo).",
+        "causes_short": false,
+        "correct": true,
+        "explanation": "¡Correcto! La pista indica que la bombilla está apagada, pero la otra sí funciona. Esto significa que el circuito paralelo principal está bien. La bombilla apagada está simplemente mal conectada (es una rama abierta). Al conectar el cable que falta (al polo negativo), cierras el circuito de esa rama y la bombilla se enciende."
+      },
+      {
+        "id": "d",
+        "text": "Reemplazar la batería de 9V por una de 12V.",
+        "causes_short": false,
+        "correct": false,
+        "explanation": "Incorrecto. Aumentar el voltaje no cerrará la rama abierta de la bombilla apagada. La bombilla seguirá sin encender, y podrías dañar la bombilla que ya estaba funcionando correctamente."
+      }
+    ]
+  }

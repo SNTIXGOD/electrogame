@@ -1,0 +1,36 @@
+{
+    "id": "lv5",
+    "title": "El Cortocircuito Peligroso",
+    "question": "En un circuito en serie (9V, 10Ω y bombilla), alguien conecta un cable que une directamente los polos de la batería. ¿Qué deberías hacer con ese cable para evitar que ocurra un cortocircuito?",
+    "image": "levels/img/lv5.png",
+    "options": [
+      {
+        "id": "a",
+        "text": "Dejar el cable, ya que la bombilla y la resistencia de 10Ω limitarán la corriente.",
+        "causes_short": true,
+        "correct": false,
+        "explanation": "¡Corto Circuito! El cable que une directamente los polos de la batería (en paralelo con el circuito principal) crea un camino de resistencia casi nula para la corriente. La corriente SIEMPRE tomará el camino de menor resistencia, ignorando el circuito con la bombilla. Esto resultaría en una descarga masiva e inmediata de la batería."
+      },
+      {
+        "id": "b",
+        "text": "Conectar una resistencia de 100Ω al cable y dejarlo conectado a los polos.",
+        "causes_short": false,
+        "correct": false,
+        "explanation": "Incorrecto. Aunque la resistencia de 100Ω limitaría la corriente en esa rama, el problema principal es la ineficiencia y el drenaje constante de la batería a través de un circuito paralelo innecesario. No estás evitando el cortocircuito, solo limitándolo en una rama indeseada."
+      },
+      {
+        "id": "c",
+        "text": "Desconectar o cortar el cable de la batería inmediatamente.",
+        "causes_short": false,
+        "correct": true,
+        "explanation": "¡Correcto! La única forma de evitar el cortocircuito inminente es eliminar el camino de resistencia cero. Desconectar o cortar el cable es la acción más segura y directa para restaurar el circuito a su estado de funcionamiento seguro (con la resistencia de 10Ω y la bombilla)."
+      },
+      {
+        "id": "d",
+        "text": "Reemplazar la batería de 9V por una de 1.5V para reducir el voltaje.",
+        "causes_short": true,
+        "correct": false,
+        "explanation": "¡Corto Circuito! Reducir el voltaje no elimina el camino de resistencia cero creado por el cable. Aunque la corriente sería menor, seguiría siendo un cortocircuito. ¡El problema es el cable, no la batería!"
+      }
+    ]
+  }

@@ -1,0 +1,36 @@
+{
+    "id": "lv2",
+    "title": "El Camino Interrumpido",
+    "question": "En un circuito en serie hay una batería de 12V, un interruptor, una resistencia de 4Ω y una bombilla. El interruptor está abierto. Tu objetivo: hacer que la bombilla se encienda a plena capacidad. ¿Qué acción debes realizar sobre el interruptor?",
+    "image": "levels/img/lv2.png",
+    "options": [
+      {
+        "id": "a",
+        "text": "Conectar un cable en paralelo con el interruptor.",
+        "causes_short": true,
+        "correct": false,
+        "explanation": "¡Corto Circuito! Conectar un cable en paralelo (puentear) el interruptor crea un camino de resistencia casi nula alrededor de la resistencia y la bombilla. Esto permite un flujo de corriente masivo directamente desde la batería, causando un corto y dañando los componentes. El objetivo es solo cerrar el circuito."
+      },
+      {
+        "id": "b",
+        "text": "Cerrar el interruptor.",
+        "causes_short": false,
+        "correct": true,
+        "explanation": "¡Correcto! La condición 'interruptor abierto' significa que el circuito está incompleto. Al cerrar el interruptor, proporcionas un camino cerrado y continuo para que la corriente fluya desde la batería, pasando por la resistencia y la bombilla, encendiéndola."
+      },
+      {
+        "id": "c",
+        "text": "Reemplazar la bombilla por una de mayor voltaje (24V).",
+        "causes_short": false,
+        "correct": false,
+        "explanation": "Incorrecto. El problema no es la bombilla, es el circuito abierto. Además, una bombilla de mayor voltaje (24V) brillaría muy poco o nada con solo 12V, incluso si el circuito estuviera cerrado."
+      },
+      {
+        "id": "d",
+        "text": "Desconectar la resistencia de 4Ω.",
+        "causes_short": false,
+        "correct": false,
+        "explanation": "Incorrecto. Quitar la resistencia no cerrará el interruptor abierto. Si la quitaras con el circuito cerrado, la bombilla podría fundirse inmediatamente debido a la corriente excesiva, ya que es el único componente limitador de corriente."
+      }
+    ]
+  }

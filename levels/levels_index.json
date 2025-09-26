@@ -1,0 +1,58 @@
+{
+    "circuitos_serie": {
+      "title": "Circuitos en Serie ⛓️",
+      "description": "Un solo camino para la corriente. Si uno falla, ¡todo se apaga!",
+      "levels": [
+        { 
+          "id": "lv1", 
+          "title": "La Bombilla Exigente", 
+          "file": "levels/lv1.json", 
+          "difficulty": "Fácil" 
+        },
+        { 
+          "id": "lv2", 
+          "title": "El Camino Interrumpido", 
+          "file": "levels/lv2.json", 
+          "difficulty": "Muy Fácil" 
+        },
+        { 
+          "id": "lv3", 
+          "title": "El Apagón Inesperado", 
+          "file": "levels/lv3.json", 
+          "difficulty": "Medio" 
+        },
+        { 
+          "id": "lv4", 
+          "title": "El Reto de la Resistencia", 
+          "file": "levels/lv4.json", 
+          "difficulty": "Medio" 
+        },
+        { 
+          "id": "lv5", 
+          "title": "El Cortocircuito Peligroso", 
+          "file": "levels/lv5.json", 
+          "difficulty": "Difícil" 
+        }
+      ]
+    },
+    
+    "circuitos_paralelo": {
+      "title": "Circuitos en Paralelo 🚦",
+      "description": "Múltiples caminos para la corriente. El voltaje es el mismo en cada rama.",
+      "levels": [
+        { 
+          "id": "lv6", 
+          "title": "La Lámpara Rebelde", 
+          "file": "levels/lv6.json", 
+          "difficulty": "Fácil" 
+        },
+        { 
+          "id": "lv7", 
+          "title": "Evita el Cortocircuito", 
+          "file": "levels/lv7.json", 
+          "difficulty": "Difícil" 
+        }
+      
+      ]
+    }
+  }

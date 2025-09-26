@@ -1,0 +1,36 @@
+{
+    "id": "lv4",
+    "title": "El Reto de la Resistencia",
+    "question": "Una batería de 12V alimenta en serie una resistencia de 2Ω, otra de 5Ω y una bombilla. Tu objetivo es hacer que la bombilla brille más intensamente. ¿Qué cambio en las resistencias podrías aplicar para aumentar la corriente total?",
+    "image": "levels/img/lv4.png",
+    "options": [
+      {
+        "id": "a",
+        "text": "Reemplazar la resistencia de 5Ω por una de 10Ω.",
+        "causes_short": false,
+        "correct": false,
+        "explanation": "Incorrecto. Aumentar la resistencia (de 5Ω a 10Ω) aumenta la resistencia total del circuito. Según la Ley de Ohm (I = V/R), esto disminuiría la corriente, haciendo que la bombilla brille menos."
+      },
+      {
+        "id": "b",
+        "text": "Conectar la resistencia de 2Ω en paralelo con la batería.",
+        "causes_short": true,
+        "correct": false,
+        "explanation": "¡Corto Circuito! Al conectar una resistencia baja (2Ω) en paralelo con la batería y el resto del circuito, desvías la mayor parte de la corriente a través de esa rama. La alta corriente drenada de la batería podría dañarla y no resolvería el problema de la bombilla, que recibiría muy poca corriente o ninguna."
+      },
+      {
+        "id": "c",
+        "text": "Reemplazar la resistencia de 2Ω por un cable (resistencia 0Ω).",
+        "causes_short": true,
+        "correct": false,
+        "explanation": "¡Corto Circuito! Eliminar completamente la resistencia de 2Ω y reemplazarla con un cable (resistencia casi nula) resulta en una caída masiva de la resistencia total. Aunque esto aumentaría la corriente (I), probablemente sería una corriente tan alta que la bombilla se fundiría inmediatamente. **NO es una solución segura ni práctica.**"
+      },
+      {
+        "id": "d",
+        "text": "Reemplazar la resistencia de 5Ω por una de 3Ω.",
+        "causes_short": false,
+        "correct": true,
+        "explanation": "¡Correcto! Al disminuir una de las resistencias (de 5Ω a 3Ω), reduces la resistencia total del circuito. Según la Ley de Ohm (I = V/R), una menor resistencia resulta en una mayor corriente (I), lo que hace que la bombilla brille más intensamente."
+      }
+    ]
+  }

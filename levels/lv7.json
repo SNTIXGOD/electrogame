@@ -1,0 +1,36 @@
+{
+    "id": "lv7",
+    "title": "Evita el Cortocircuito",
+    "question": "En un circuito paralelo hay una batería de 12V, dos bombillas y un cable que conecta directamente el positivo y el negativo. Tu objetivo: encender las bombillas sin provocar un cortocircuito. ¿Qué deberías hacer con ese cable?",
+    "image": "levels/img/lv7.png",
+    "options": [
+      {
+        "id": "a",
+        "text": "Conectar una resistencia de 10Ω en serie con ese cable.",
+        "causes_short": false,
+        "correct": false,
+        "explanation": "Incorrecto. Aunque agregar una resistencia evita el cortocircuito, esa rama de baja resistencia drena innecesariamente la batería. Además, la corriente tomará ese camino fácilmente, dejando muy poca corriente para las bombillas."
+      },
+      {
+        "id": "b",
+        "text": "Desconectar o cortar el cable inmediatamente.",
+        "causes_short": false,
+        "correct": true,
+        "explanation": "¡Correcto! El cable es un camino de resistencia casi nula conectado en paralelo (un cortocircuito). La única forma de evitar la descarga inminente y hacer que la corriente fluya solo por las ramas de las bombillas es eliminar ese cable por completo."
+      },
+      {
+        "id": "c",
+        "text": "Reemplazar las bombillas por otras de mayor voltaje (24V).",
+        "causes_short": true,
+        "correct": false,
+        "explanation": "¡Corto Circuito! El cable que une los polos de la batería ya está creando un cortocircuito. El estado de las bombillas no importa; el cable garantiza que la corriente tome el camino más fácil y destructivo, descargando la batería inmediatamente."
+      },
+      {
+        "id": "d",
+        "text": "Conectar el cable entre las dos bombillas (en serie).",
+        "causes_short": true,
+        "correct": false,
+        "explanation": "¡Corto Circuito! Conectar el cable entre las bombillas en paralelo no elimina el problema, sino que lo redistribuye. El cable seguiría creando un camino de resistencia cero o casi cero entre los polos, desviando la corriente de forma peligrosa."
+      }
+    ]
+  }

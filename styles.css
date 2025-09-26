@@ -1,0 +1,362 @@
+/* ========================================================== */
+/* 1. Global Reset y Estilos Base (MODO OSCURO POR DEFECTO) */
+/* ========================================================== */
+:root {
+    /* Colores base oscuros */
+    --color-text: #e0e0e0; /* Texto claro */
+    --color-background: #121212; /* Fondo muy oscuro */
+    --color-card-bg: #1e1e1e; /* Fondo de tarjetas y contenedores oscuros */
+    
+    /* Colores primarios y acentos */
+    --color-primary: #8ab4f8; /* Azul claro para acentos (ideal para modo oscuro) */
+    --color-short-circuit: #cf6679; /* Rojo vibrante para corto */
+    --color-success: #6cbf84; /* Verde suave */
+
+    /* Sombras oscuras */
+    --shadow-light: 0 4px 6px rgba(0, 0, 0, 0.4); 
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--color-background); 
+    color: var(--color-text); 
+    padding: 20px;
+}
+
+h1, h2, h3 {
+    margin-bottom: 15px;
+    color: var(--color-primary);
+}
+
+.screen {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    background: var(--color-card-bg); 
+    border-radius: 8px;
+    box-shadow: var(--shadow-light);
+}
+
+/* Oculta los elementos que no están activos */
+.hidden {
+    display: none !important;
+}
+
+/* ========================================================== */
+/* 2. Pantalla de Selección de Niveles */
+/* ========================================================== */
+#level-selection {
+    text-align: center;
+}
+
+/* ⚡ CORRECCIÓN: Estilo de rejilla aplicado a los contenedores internos (.grid-container) */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.level-card {
+    background-color: var(--color-card-bg);
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #333; 
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+    text-align: left;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.level-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4);
+    border-color: var(--color-primary);
+    background-color: #2a2a2a; 
+}
+
+.level-card h3 {
+    margin-bottom: 5px;
+    color: var(--color-primary); 
+}
+
+/* ========================================================== */
+/* 3. Vista del Nivel (Imagen y Opciones) */
+/* ========================================================== */
+#level-view {
+    text-align: center;
+}
+
+.back-button {
+    background: none;
+    border: none;
+    color: var(--color-primary);
+    cursor: pointer;
+    font-size: 1em;
+    padding: 5px 0;
+    margin-bottom: 20px;
+    display: block;
+    width: fit-content;
+    text-decoration: underline;
+    transition: color 0.2s;
+}
+
+.back-button:hover {
+    color: #fff; 
+}
+
+.circuit-area {
+    margin: 30px 0;
+    position: relative; 
+    overflow: hidden;
+    max-width: 700px; 
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px dashed #444; 
+}
+
+.circuit-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.question-text {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.options-grid {
+    display: grid;
+    grid-template-columns: 1fr; 
+    gap: 15px;
+    margin-top: 20px;
+}
+
+@media (min-width: 600px) {
+    .options-grid {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+.option-button {
+    padding: 15px 20px;
+    font-size: 1em;
+    border: 2px solid #555; 
+    background-color: var(--color-card-bg);
+    color: var(--color-text);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s, border-color 0.2s, color 0.2s;
+    text-align: left;
+    outline: none; 
+}
+
+.option-button:hover:not(:disabled) {
+    background-color: #333;
+    border-color: var(--color-primary);
+}
+
+.option-button:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+/* Estilos de retroalimentación */
+.feedback {
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.feedback.correct {
+    background-color: rgba(108, 191, 132, 0.2); 
+    color: var(--color-success);
+    border: 1px solid var(--color-success);
+}
+
+.feedback.incorrect {
+    background-color: rgba(207, 102, 121, 0.2);
+    color: var(--color-short-circuit);
+    border: 1px solid var(--color-short-circuit);
+}
+
+/* Estilo para el botón de "Siguiente Nivel" / "Intentar de Nuevo" */
+#next-action {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: 2px solid var(--color-primary);
+    background-color: var(--color-primary);
+    color: #121212; 
+    font-weight: bold;
+    transition: background-color 0.2s, opacity 0.2s;
+    cursor: pointer; 
+}
+
+#next-action:hover {
+    background-color: #7099e2;
+}
+
+
+/* ========================================================== */
+/* 4. Alerta de ¡Corto Circuito! */
+/* ========================================================== */
+.alert-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; 
+    
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+}
+
+.alert-overlay[aria-hidden="false"] {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.alert-content {
+    background-color: var(--color-short-circuit); 
+    color: white;
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    max-width: 90%;
+    box-shadow: 0 0 40px rgba(255, 0, 0, 0.9); 
+    border: 5px solid white;
+    animation: pulse 1s infinite alternate; 
+}
+
+.alert-title {
+    font-size: 3.5em; 
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    text-shadow: 3px 3px #000;
+}
+
+.alert-message {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+}
+
+.alert-button {
+    background-color: white;
+    color: var(--color-short-circuit);
+    border: none;
+    padding: 10px 30px;
+    border-radius: 5px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.alert-button:hover {
+    background-color: #f0f0f0;
+}
+
+/* Animación de Pulsación */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 30px rgba(255, 0, 0, 0.5);
+    }
+    100% {
+        transform: scale(1.02);
+        box-shadow: 0 0 50px rgba(255, 0, 0, 1);
+    }
+}
+
+
+/* ========================================================== */
+/* 5. Optimización Mobile (Media Queries) */
+/* ========================================================== */
+
+/* Ajustes para pantallas pequeñas (móviles) */
+@media (max-width: 600px) {
+    
+    /* General y Estructura */
+    body {
+        padding: 10px; /* Reduce el padding del cuerpo */
+    }
+
+    .screen {
+        padding: 15px; /* Reduce el padding de las pantallas */
+    }
+
+    /* Tipografía */
+    h1 {
+        font-size: 1.8em; /* H1 más pequeño */
+    }
+
+    h2 {
+        font-size: 1.5em; /* H2 más pequeño */
+    }
+    
+    .question-text {
+        font-size: 1.1em; /* Pregunta más legible */
+        margin-bottom: 15px;
+    }
+
+    /* Botones de Opción */
+    .options-grid {
+        grid-template-columns: 1fr; /* Asegura una columna simple en móviles */
+        gap: 10px;
+    }
+
+    .option-button {
+        padding: 12px 15px; /* Botones de opción más compactos */
+        font-size: 0.95em;
+    }
+
+    /* Tarjetas de Nivel (el grid-container ya tiene 1fr por defecto si es < 250px) */
+    .grid-container {
+        grid-template-columns: 1fr; /* Una sola columna forzada en móvil */
+    }
+
+    .level-card {
+        padding: 15px;
+    }
+
+    /* Botón de Acción */
+    #next-action {
+        width: 100%; /* El botón de acción ocupa todo el ancho */
+    }
+}
+
+/* Ajustes para la Alerta de Corto Circuito en móviles */
+@media (max-width: 450px) {
+    .alert-content {
+        padding: 20px;
+        border: 3px solid white; /* Borde más delgado */
+    }
+
+    .alert-title {
+        font-size: 2.2em;
+        margin-bottom: 15px;
+    }
+
+    .alert-message {
+        font-size: 1.2em;
+        margin-bottom: 20px;
+    }
+}

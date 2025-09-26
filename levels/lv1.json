@@ -1,0 +1,39 @@
+
+{
+    "id": "lv1",
+    "title": "La Bombilla Exigente",
+    "image": "levels/img/lv1.png", 
+    "question": "Tienes una batería de 9V conectada en serie con dos resistencias (3Ω y 6Ω) y una bombilla. ¿Qué debes hacer para que la bombilla reciba la MAYOR corriente posible?",
+    "options": [
+      { 
+        "id": "a", 
+        "text": "Reemplazar la resistencia de 6Ω por una de 10Ω.", 
+        "causes_short": false, 
+        "correct": false, 
+        "explanation": "Incorrecto. Aumentar la resistencia total (R_total) disminuirá la corriente (I = V/R_total), haciendo que la bombilla brille menos." 
+      },
+      { 
+        "id": "b", 
+        "text": "Quitar la resistencia de 3Ω y conectar un cable en su lugar.", 
+        "causes_short": false, 
+        "correct": true, 
+        "explanation": "¡Correcto! Quitar una resistencia reduce la resistencia total del circuito. Al ser menor la R_total, la corriente (I) aumenta, dándole más potencia a la bombilla." 
+      },
+      { 
+        "id": "c", 
+        "text": "Conectar un cable en paralelo con la batería de 9V.", 
+        "causes_short": true, 
+        "correct": false, 
+        "explanation": "¡Corto Circuito! Esto crearía un camino de resistencia cero o casi nula a través de la batería, desviando toda la corriente sin pasar por la bombilla y sobrecalentando la fuente." 
+      },
+      { 
+        "id": "d", 
+        "text": "Duplicar el voltaje de la fuente a 18V.", 
+        "causes_short": false, 
+        "correct": false, 
+        "explanation": "Si bien aumentaría la corriente, el objetivo pide modificar un componente del circuito (resistencias/conexiones), no la fuente de voltaje. Quitar la resistencia es la mejor opción entre los componentes pasivos." 
+      }
+    ],
+    "difficulty": "fácil",
+    "tags": ["ley_de_ohm", "serie", "resistencia"]
+  }

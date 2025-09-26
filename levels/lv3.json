@@ -1,0 +1,36 @@
+{
+    "id": "lv3",
+    "title": "El Apagón Inesperado",
+    "question": "Tres bombillas están conectadas en serie a una batería de 6V. Una de ellas se quema (se abre). Tu objetivo es restaurar el funcionamiento del circuito para que las otras dos vuelvan a encenderse. ¿Qué deberías hacer con la bombilla dañada?",
+    "image": "levels/img/lv3.png",
+    "options": [
+      {
+        "id": "a",
+        "text": "Quitar la bombilla dañada y dejar el hueco vacío.",
+        "causes_short": false,
+        "correct": false,
+        "explanation": "Incorrecto. Al quitar la bombilla, el circuito sigue interrumpido (abierto) en ese punto. En un circuito en serie, si hay un 'hueco', la corriente no puede fluir y ninguna bombilla se encenderá."
+      },
+      {
+        "id": "b",
+        "text": "Reemplazar la bombilla quemada por una nueva de 6V.",
+        "causes_short": false,
+        "correct": false,
+        "explanation": "Incorrecto. Aunque esa sería la solución real si tuvieras una bombilla de repuesto, la batería de 6V está conectada a tres bombillas. Cada una necesita solo 2V (6V / 3 = 2V). Una bombilla de 6V estaría 'sub-voltada' y no encendería a plena capacidad, asumiendo que el objetivo es restaurar las OTRAS dos."
+      },
+      {
+        "id": "c",
+        "text": "Puentea (conecta un cable en paralelo) a la bombilla dañada.",
+        "causes_short": false,
+        "correct": true,
+        "explanation": "¡Correcto! Una bombilla quemada actúa como un interruptor abierto. Al puentearla, cierras el camino para la corriente. La corriente ahora fluye por el cable, y las dos bombillas restantes se encienden. OJO: ¡Ahora brillarán más! (Comparten 6V entre dos, no tres)."
+      },
+      {
+        "id": "d",
+        "text": "Conectar un cable en paralelo con la batería de 6V.",
+        "causes_short": true,
+        "correct": false,
+        "explanation": "¡Corto Circuito! Puentear la batería con un cable sin ninguna resistencia crea un camino de resistencia cero o casi nula. Esto provoca un flujo de corriente masivo e incontrolado, dañando la batería."
+      }
+    ]
+  }
