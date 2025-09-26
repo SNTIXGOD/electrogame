@@ -55,6 +55,10 @@ function showLevelView(levelData) {
     $circuitImage.src = levelData.image;
     $circuitImage.alt = `Diagrama de circuito: ${levelData.title}`;
 
+    // ⚡ CORRECCIÓN: Ocultar el feedback y el botón de acción al cargar un nuevo nivel
+    $feedbackArea.classList.add('hidden'); 
+    $nextActionButton.classList.add('hidden');
+
     // Limpiar y renderizar opciones
     $optionsContainer.innerHTML = '';
     levelData.options.forEach(opt => {
@@ -322,7 +326,7 @@ $backToLevelsButton.addEventListener('click', () => {
 
 $closeShortButton.addEventListener('click', hideShortCircuit);
 
-// Lógica de Siguiente Nivel/Reintento (FINAL y UNIFICADA)
+// Lógica de Siguiente Nivel/Reintento
 $nextActionButton.addEventListener('click', () => {
     
     // 1. Caso de Éxito: Siguiente Nivel
